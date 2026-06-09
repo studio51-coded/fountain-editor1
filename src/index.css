@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-900 text-zinc-100 font-mono;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Editor textarea */
+.editor-textarea {
+  @apply w-full h-full bg-transparent text-zinc-100 resize-none outline-none;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 12pt;
+  line-height: 1.5;
+  caret-color: #a78bfa;
+}
+
+/* Screenplay page — white on dark background */
+.screenplay-page {
+  background: white;
+  color: black;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  padding: 1in 1in 1in 1.5in;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 12pt;
+  line-height: 1.5;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+}
+
+/* Fountain element styles */
+.fn-scene-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+.fn-action {
+  margin-top: 1em;
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+
+.fn-character {
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 0;
+  margin-left: 2.2in;
+}
+
+.fn-dialogue {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1in;
+  margin-right: 1in;
+  white-space: pre-wrap;
+}
+
+.fn-parenthetical {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1.6in;
+  margin-right: 1.6in;
+}
+
+.fn-transition {
+  text-transform: uppercase;
+  text-align: right;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.fn-title-page {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.fn-title-page .title {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.fn-centered {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .screenplay-page {
+    box-shadow: none;
+    margin: 0;
+    padding: 1in 1in 1in 1.5in;
+    width: 100%;
+    min-height: auto;
+  }
+}
